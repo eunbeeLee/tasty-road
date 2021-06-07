@@ -12,6 +12,7 @@ import javax.persistence.*;
 public class RestaurantsCategories {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "CATEGORY_ID")
     private Long id;
 
     @Column(nullable = false)
@@ -24,5 +25,9 @@ public class RestaurantsCategories {
     public RestaurantsCategories (String name, String code){
         this.name = name;
         this.code= code;
+    }
+
+    public void update(String name){
+        this.name = name;
     }
 }

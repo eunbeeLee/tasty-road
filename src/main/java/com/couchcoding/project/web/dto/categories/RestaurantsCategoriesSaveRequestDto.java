@@ -1,4 +1,4 @@
-package com.couchcoding.project.web.dto;
+package com.couchcoding.project.web.dto.categories;
 
 import com.couchcoding.project.domain.restaurantscategories.RestaurantsCategories;
 import lombok.Builder;
@@ -7,12 +7,12 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class RestaurantsCategoriesRequestDto {
+public class RestaurantsCategoriesSaveRequestDto {
     private String name;
     private String code;
 
     @Builder
-    public RestaurantsCategoriesRequestDto(String name, String code){
+    public RestaurantsCategoriesSaveRequestDto(String name, String code){
         this.name = name;
         this.code = code;
     }
