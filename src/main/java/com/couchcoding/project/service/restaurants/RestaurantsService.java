@@ -47,7 +47,7 @@ public class RestaurantsService {
         Restaurants restaurants = restaurantsRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 식당 정보가 없습니다."));
 
-        RestaurantsCategories categories = categoriesService.findById(id);
+        RestaurantsCategories categories = categoriesService.findById(requestDto.getCategoryId());
 
         restaurants.update(requestDto.getName(), requestDto.getAddress(), requestDto.getStarRate(),
                 categories, requestDto.getVisitDate(), requestDto.getMemo());
